@@ -1,0 +1,36 @@
+.main-top
+  .main-top__header
+    %p ---Basketball  General Shopping Site---
+    %h1 Closs Culture
+    .main-top__header__site-in
+      %p Please signin or signup
+    .main-top__header__sign
+      .main-top__header__sign__up
+        =link_to new_user_registration_path, class: "main-top__header__sign__up__btn", method: :get do
+          = fa_icon "caret-right"
+          %span 新規登録 Signup
+      .main-top__header__sign__in
+        =link_to new_user_session_path, class: "main-top__header__sign__up__btn", method: :get do
+          = fa_icon "caret-right"
+          %span ログイン Login
+    .main-top__header__sign__sns__text
+      %p SNSでも新規登録、ログインが可能です
+    .main-top__header__sign__sns
+      =link_to user_facebook_omniauth_authorize_path, class: "main-top__header__sign__sns__facebook", method: :post do
+        %span.main-top__header__sign__sns__facebook__square
+          = fa_icon "facebook-f"
+      =link_to user_google_oauth2_omniauth_authorize_path, class: "main-top__header__sign__sns__google", method: :post do
+        %span.main-top__header__sign__sns__google__square
+          = image_tag ("google.png"), height: '30', width: '30'
+      =link_to "https://www.google.com/", class: "main-top__header__sign__sns__instagram" do
+        %span.main-top__header__sign__sns__instagram__square
+          = fa_icon "instagram", class: "fa-facebook"
+  .main-top__profile
+    %h1 PROFILE
+    %p 
+      いらなくなったバスケットウェア・シューズ・グッズ等はありますか？
+      %br/
+      このサイトは、今頑張っている子供達・プレイヤーにあなたのきれなくなったウェア・シューズもしくは必要なくなったボール等を出品することができます。また、あなたが欲しかったウェアなど見つけて購入することも可能です。
+      %br/
+      共通の商品に趣味を持った仲間がコミュニケーションを取れるようなオリジナリティ溢れるアプリケーションです。興味のある方はぜひお試しください！
+= render 'shared/footer'

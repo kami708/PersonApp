@@ -1,0 +1,24 @@
+.category-wrapper
+  = render 'shared/header'
+  .category
+    .category__box
+      .category__box__container
+        %h2.category__box__container__title
+          メンズ商品一覧
+      .category__box__container__products
+        .category__box__container__products__product 
+          =link_to "#0", class: "link" do
+            =image_tag "nike_shose.webp"
+        .category__box__container__products__product 
+          =link_to "#0", class: "link" do
+            =image_tag "nike_shose.webp"
+        .category__box__container__products__product 
+          =link_to "#0", class: "link" do
+            =image_tag "nike_shose.webp"
+        .category__box__container__products__product 
+          =link_to "#0", class: "link" do
+            =image_tag "nike_shose.webp"
+        .category__box__container__products__product 
+          =link_to "#0", class: "link" do
+            =image_tag "nike_shose.webp"
+  = render 'shared/footer'

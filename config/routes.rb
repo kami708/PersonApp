@@ -5,7 +5,15 @@ Rails.application.routes.draw do
                  registrations: 'users/registrations'
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'products#index'
+  root 'tops#index'
+
+  resources :tops ,only:[:index]
   resources :products do
+  end
+
+  resources :categories do
+  end
+
+  resources :users do
   end
 end

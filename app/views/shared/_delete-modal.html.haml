@@ -1,0 +1,24 @@
+.flex1
+  .modalcontainer
+    .flex2
+      .modal
+        .close
+          %span 
+            +
+        .content
+          %h2 
+            削除確認
+          %p 
+            削除すると二度と復活できません。
+            %br
+            同じ商品を出品する必要があります。
+            %br
+            %br
+            %br/
+            本当に削除しますか？
+        .buttons
+          =link_to "キャンセル", "#0"
+          =link_to "削除", "#0"
+          -# =link_to "削除", method: :delete
+ 
+  

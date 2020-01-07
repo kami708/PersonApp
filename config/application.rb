@@ -17,7 +17,7 @@ module PersonApp
       g.helper false
       g.test_framework false
     end
-    config.time_zone = 'Tokyo'
+    config.time_zone = 'Asia/Tokyo'
     config.i18n.default_locale = :ja
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

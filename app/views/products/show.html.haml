@@ -1,0 +1,71 @@
+.product-wrapper
+  = render 'shared/header'
+  .products
+    .products__images
+      .products__images__box
+        .products__images__box__image
+          #slider-product.swiper-container
+            = render 'slide'
+          #thumbs-product.swiper-container.mb60
+            = render 'thumbs'
+    .products__right
+      .products__right__box
+        .products__right__box__product
+          .products__right__box__product__detele
+            .products__right__box__product__detele__name
+              %h2 ランニングシューズ
+              %h1 ナイキ ズームX ヴェイパーフライ ネクスト％
+            .products__right__box__product__detele__price
+              %span.product__price ¥30,250
+              %br/
+              %span.product__tax (税込)
+          .products__right__box__product__form
+            .products__right__box__product__form__size
+              .products__right__box__product__form__size__chart
+                %span サイズを選択
+              .products__right__box__product__form__size__select
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+                .products__right__box__product__form__size__select__box
+                  =link_to "JP23", "#", class: "products__right__box__product__form__size__select__box__label"
+            .products__right__box__product__form__buys
+              %button{class: "products__right__box__product__form__buys__purchase", type: "button"}
+                %span 商品を購入する
+              = button_tag "", class: "products__right__box__product__form__buys__like" do
+                %span
+                  お気に入りに追加
+                = image_tag "icon_heart.png", size: "18"
+  .products__change
+    .products__change__box
+      =link_to  "商品の編集","#0", class: "products__change__box__edit"
+      =link_to "この商品を削除する", "#", class: 'modalbttn'
+  = render 'shared/footer'
+= render 'shared/delete-modal'
