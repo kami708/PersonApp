@@ -1,0 +1,5 @@
+.top__header__box__under__categories
+  - @parents.each do |parent|
+    = link_to "#{parent.name}", category_path(parent), class: "top__header__box__under__categories__list",id: "#{parent.id}" 
+  .children_list
+  .grand_children_list

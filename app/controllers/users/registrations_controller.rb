@@ -59,13 +59,28 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+  # def create
+  #   # binding.pry
+  #   password = Devise.friendly_token.first(7)
+  #   if session[:provider].present? && session[:uid].present?
+  #     @user = User.create(name:session[:name], email: session[:email], password: "password", password_confirmation: "password")
+  #     sns = SnsCredential.create(user_id: @user.id,uid: session[:uid], provider: session[:provider])
+  #   else
+  #     @user = User.create(name:session[:name], email: session[:email], password: session[:password], password_confirmation: session[:password_confirmation])
+  #   end
+  # end
+ 
   def create
-    password = Devise.friendly_token.first(7)
-    if session[:provider].present? && session[:uid].present?
-      @user = User.create(nickname:session[:nickname], email: session[:email], password: "password", password_confirmation: "password")
-      sns = SnsCredential.create(user_id: @user.id,uid: session[:uid], provider: session[:provider])
-    else
-      @user = User.create(nickname:session[:nickname], email: session[:email], password: session[:password], password_confirmation: session[:password_confirmation])
+    #binding.pry
+    if params[:user][:password] == "" #sns登録なら
+      params[:user][:password] = "Devise.friendly_token.first(6)" #deviseのパスワード自動生成機能を使用
+      params[:user][:password_confirmation] = "Devise.friendly_token.first(6)"
+      super
+      # binding.pry
+      sns = SnsCredential.update(user_id:  @user.id)
+    else #email登録なら
+      # binding.pry
+      super
     end
   end
 end

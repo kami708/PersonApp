@@ -3,19 +3,17 @@
     .top__header__box__top
       .top__header__box__top__box
         %ul.top__header__box__top__box__brand
-          %li.top__header__box__top__box__brand__list
-            =link_to 'Nike Plus', "https://www.google.com/", class: "top__header__box__top__box__brand__list__one"
-          %li.top__header__box__top__box__brand__list
-            =link_to 'Nike Plus', "https://www.google.com/", class: "top__header__box__top__box__brand__list__one"
+          = render 'brands/window'
         .top__header__box__top__box__mypage
           =link_to "https://www.google.com/", class: "top__header__box__top__box__mypage__link" do
             = fa_icon "user-circle", class: "top__header__box__top__box__mypage__icon"
+        .top__header__box__top__box__logout
+          =link_to destroy_user_session_path, class: "top__header__box__top__box__logout__link", method: :delete do
+            = fa_icon "outdent", class: "top__header__box__top__box__logout__link__icon"
     .top__header__box__under
       .top__header__box__under__icon
         = image_tag ("CC-icon.jpg"), height: '60', width: '100'
-      .top__header__box__under__categories
-        = link_to 'Mens', "https://www.google.com/", class: "top__header__box__under__categories__list"
-        = link_to 'Mens', "https://www.google.com/", class: "top__header__box__under__categories__list"
+      = render 'categories/window'
       = form_tag('/search', method: :get, class: 'search-form') do
         %button.btn-search{title: "検索", type: "submit"}
           = fa_icon "search", class: "search-form__icon"

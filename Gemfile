@@ -74,6 +74,7 @@ gem 'fog-aws'
 gem 'pry-rails'
 gem 'ancestry'
 gem 'bootstrap', '~> 4.3.1'
+gem 'bcrypt', '~> 3.1.7'
 gem 'devise-bootstrap-views', '~> 1.0'
 gem "omniauth-rails_csrf_protection"
 gem 'omniauth-facebook'

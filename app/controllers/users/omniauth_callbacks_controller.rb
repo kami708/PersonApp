@@ -35,6 +35,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     callback_for(:google)
   end
 
+  def instagram
+    callback_for(:instagram)
+  end
+
 
   def callback_for(provider)
     @omniauth = request.env['omniauth.auth']
