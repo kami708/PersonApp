@@ -13,7 +13,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    category_check(@category)
+    # category_check(@category)
   end
 
   private

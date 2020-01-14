@@ -1,0 +1,8 @@
+nike = Brand.create(name:"nike", image:"nike.png")
+jordan = Brand.create(name:"jordan", image:"jordan.png")
+asics = Brand.create(name:"asics", image:"asics.jpg")
+under_armor = Brand.create(name:"Under Armor", image:"under_armour.png")
+adidas = Brand.create(name:"adidas", image:"Adidas.png")
+aktr = Brand.create(name:"AKTR", image:"header-logo.png")
+arch = Brand.create(name:"ARCH", image:"arch.png")
+crossover_culture = Brand.create(name:"crossover culture", image:"crossover_culture.png")

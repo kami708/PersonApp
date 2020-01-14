@@ -1,0 +1,3 @@
+- @persons.each do |person|
+  = link_to brand_path(person), class: "top__header__box__top__box__brand__list__one" , id: "#{person.id}"do
+    = image_tag ("#{person.image_was}"), height: '30', width: '40'

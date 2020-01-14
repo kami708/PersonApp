@@ -6,7 +6,7 @@
       %p Please signin or signup
     .main-top__header__sign
       .main-top__header__sign__up
-        =link_to new_user_registration_path, class: "main-top__header__sign__up__btn", method: :get do
+        =link_to new_user_registration_path, class: "main-top__header__sign__up__btn" do
           = fa_icon "caret-right"
           %span 新規登録 Signup
       .main-top__header__sign__in
@@ -22,7 +22,7 @@
       =link_to user_google_oauth2_omniauth_authorize_path, class: "main-top__header__sign__sns__google", method: :post do
         %span.main-top__header__sign__sns__google__square
           = image_tag ("google.png"), height: '30', width: '30'
-      =link_to "https://www.google.com/", class: "main-top__header__sign__sns__instagram" do
+      =link_to user_instagram_omniauth_authorize_path, class: "main-top__header__sign__sns__instagram" do
         %span.main-top__header__sign__sns__instagram__square
           = fa_icon "instagram", class: "fa-facebook"
   .main-top__profile
@@ -34,3 +34,4 @@
       %br/
       共通の商品に趣味を持った仲間がコミュニケーションを取れるようなオリジナリティ溢れるアプリケーションです。興味のある方はぜひお試しください！
 = render 'shared/footer'
+    
