@@ -23,7 +23,7 @@
                   .sell-upload-drop-box
                     %pre クリックしてファイルをアップロード
                     = i.file_field :image, type: "file", class: "upload-image"
-            = render partial: 'shared/error', locals: { key: "item_images"}
+            = render partial: 'shared/error', locals: { key: "product_images"}
             .image-box2
               #preview2
               = f.fields_for :product_images do |i|
@@ -60,55 +60,7 @@
               .select-wrap#select_parent_category
                 = f.collection_select :category_id, @category_parent_array, :id, :name, {prompt: "---"}, class: "select-default", id: "parent_category"
                 = render partial: 'shared/error', locals: { key: "category_id"}
-
-
-            .form-group
-              %label.form-label
-                商品の状態
-              %span.form-require
-                必須
-              .select-wrap
-                = f.collection_select :condition, ItemCondition.all, :name, :name, { prompt: "---"}, class: "select-default"
-              = render partial: 'shared/error', locals: { key: "condition"}
-
         .sell-content
-          %h3.sell-sub-head
-            配送について
-            %span<>
-            %i.fa.fa-question-circle
-          .sell-form-box
-            .form-group-first#postage
-              %label.form-label
-                配送料の負担
-              %span.form-require
-                必須
-              .select-wrap
-                = f.collection_select :postage, ItemPostage.all, :name, :name, { prompt: "---"}, class: "select-default"
-              = render partial: 'shared/error', locals: { key: "postage"}
-
-            .form-group
-              %label.form-label
-                発送元の地域
-              %span.form-require
-                必須
-              .select-wrap
-                =f.collection_select :departure_area, Prefecture.all, :name, :name,  { prompt: "---"}, class: "select-default"
-                = render partial: 'shared/error', locals: { key: "departure_area"}
-            .form-group
-              %label.form-label
-                発送までの日数
-              %span.form-require
-                必須
-              .select-wrap
-                = f.collection_select :lead_time, ItemLeadTime.all, :name, :name,  { prompt: "---"}, class: "select-default"
-              = render partial: 'shared/error', locals: { key: "lead_time"}
-
-        .sell-content
-          %h3.sell-sub-head
-            販売価格（300〜9,999,999）
-            %span<>
-            %i.fa.fa-question-circle
-            
           .sell-form-box
             %ul.l-left
               %li.form-group-first
@@ -133,29 +85,7 @@
               −
 
         .sell-content
-          = link_to '禁止されている出品', 'https://www.mercari.com/jp/help_center/getting_started/prohibited_items/', target: 'blank'
-          、
-          = link_to '行為', 'https://www.mercari.com/jp/help_center/getting_started/prohibited_conduct/', target: 'blank'
-          を必ずご確認ください。<br>
-          またブランド品でシリアルナンバー等がある場合はご記載ください。
-          = link_to '偽ブランドの販売', 'https://www.mercari.com/jp/help_center/getting_started/counterfeit_goods/', target: 'blank'
-          は犯罪であり処罰される可能性があります。<br>
-          また、出品をもちまして
-          = link_to '加盟店規約', 'https://www.mercari.com/jp/seller_terms/', target: 'blank'
-          に同意したことになります。
           .form-group
             =f.submit '出品する', class: 'btn__sell_red'
             = link_to 'もどる', root_path, class: "btn btn__gray"
--# = form_for @product, html: {id:'new_product'} do |f|
--#   .product__images__container
--#     .product__images__container__preview
--#       / 以下のulタグの下に、Jsからli要素を挿入することでプレビューを実現します。
--#       %ul
--#     .product__images__container__guide
--#       / ドラッグ&ドロップエリアをプレビューによって変動させたい場合以下のようなclassを作成し、プレビュー画像の数によってclassを変える。
--#       .have__image--0
--#         %h5 ドラッグ&ドロップ<br>でファイルをアップロード
--#     / 中略(そのほか様々なフォームがある想定)
--#     .product__form__sellcontent__submit__done
--#       = f.submit class: 'btn-default product__done', disable_with: "Save", value:"出品する"
 = render 'shared/footer'

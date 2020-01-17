@@ -1,13 +1,14 @@
 .swiper-wrapper
-  .swiper-slide
-    = image_tag "img01.jpg", alt: ""
-  .swiper-slide
-    = image_tag "img02.jpg", alt: ""
-  .swiper-slide
-    = image_tag "img03.jpg", alt: ""
-  .swiper-slide
-    = image_tag "img01.jpg", alt: ""
-  .swiper-slide
-    = image_tag "img02.jpg", alt: ""
-  .swiper-slide
-    = image_tag "img03.jpg", alt: ""
+  = render partial: "product", collection: @new_releases, as: "product"
+  -# .swiper-slide
+  -#   = image_tag "img01.jpg", alt: ""
+  -# .swiper-slide
+  -#   = image_tag "img02.jpg", alt: ""
+  -# .swiper-slide
+  -#   = image_tag "img03.jpg", alt: ""
+  -# .swiper-slide
+  -#   = image_tag "img01.jpg", alt: ""
+  -# .swiper-slide
+  -#   = image_tag "img02.jpg", alt: ""
+  -# .swiper-slide
+  -#   = image_tag "img03.jpg", alt: ""

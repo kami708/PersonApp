@@ -106,11 +106,9 @@
   line-height: 30px; 
 }
 
-.sell-dropbox-container {
+.sell-dropbox-container{
   margin: 0 auto;
   width: 620px;
-}
-.sell-dropbox-container{
   .image-box{
     display: flex;
     height: 184px;
@@ -161,7 +159,11 @@
 .sell-content {
   border-top: 1px solid #f5f5f5;
   padding: 40px;
-  @include clearfix;
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
   a {
     color: #0099e8;
     line-height: 1.5;
@@ -486,6 +488,7 @@
   cursor: pointer;
   margin-left: 10px;
   display: block;
+  z-index: 10;
 }
 
 #image-label-0{
