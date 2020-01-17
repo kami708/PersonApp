@@ -27,7 +27,7 @@ Things you may want to cover:
 Nikeとメルカリを組み合わせた、フリマアプリに近い商品投稿Appです。
 主にNikeのホームページを参考に作成しました。
 
-https://i.gyazo.com/be7f921173a1212c39a49677162e82ef.jpg
+<img src="https://i.gyazo.com/be7f921173a1212c39a49677162e82ef.jpg" alt="Image from Gyazo" width="1440"/></a>
 
 
 
