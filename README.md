@@ -7,6 +7,9 @@
 
 <img src="https://i.gyazo.com/be7f921173a1212c39a49677162e82ef.jpg" alt="Image from Gyazo" width="1440"/></a>
 
+<img src="https://i.gyazo.com/fbabc6b18c275eea1a3052db03d1e983.png" alt="Image from Gyazo" width="1440"/></a>
+
+<video alt="Video from Gyazo" width="1000" autoplay muted loop playsinline controls><source src="https://i.gyazo.com/92908644b839abe429419dd931a405ec.mp4" type="video/mp4" /></video></a>
 
 * 工夫した点
 <p>最終課題の方で、自分が担当した機能をもう一度振り返って作成しました。
@@ -22,10 +25,13 @@
   - 出品機能による商品投稿
   - Swiperによる商品スライド表示
   - 削除専用のモーダン作成
+</br>
+</br>
 
 * テスト
 
-
+</br>
+</br>
 
 * 今後実装したい機能
   - omniauthによるinstagramを使用した新規登録。ログイン機能
@@ -34,7 +40,8 @@
   - 商品情報編集機能
   - 商品検索機能
 
-
+</br>
+</br>
 
 * サービス機能関連
   - カテゴリー機能

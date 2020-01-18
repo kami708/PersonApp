@@ -17,6 +17,14 @@ class ProductsController < ApplicationController
 
   end
 
+  def show
+    @product = Product.find(params[:id])
+    @images = @product.product_images
+    if @product.seller_id != current_user.id
+      redirect_to root_path
+    end
+  end
+
   def create
     @product = Product.new(product_params)    
     if @product.save
@@ -34,7 +42,7 @@ class ProductsController < ApplicationController
       redirect_to root_path
       flash[:alert] = '商品を削除しました'
     else
-      redirect_to product_path(@product)
+      redirect_to root_path
       flash[:alert] = '商品削除に失敗しました'
     end
   end

@@ -43,6 +43,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+  gem 'faker'
 end
 
 group :development do
@@ -73,9 +77,7 @@ gem 'carrierwave'
 gem 'fog-aws'
 gem 'pry-rails'
 gem 'ancestry'
-gem 'bootstrap', '~> 4.3.1'
 gem 'bcrypt', '~> 3.1.7'
-gem 'devise-bootstrap-views', '~> 1.0'
 gem "omniauth-rails_csrf_protection"
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'

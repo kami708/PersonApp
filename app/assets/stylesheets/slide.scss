@@ -25,7 +25,7 @@
   width: 940px;
 }
 .swiper-container{
-  width: 940px;
+  text-align: center;
 }
 #slider-product{
   width: 650px;
@@ -38,6 +38,20 @@
 }
 #thumbs-product{
   width: 650px;
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  .swiper-slide{
+    width: 20%;
+    height: 100%;
+    opacity: 1;
+    cursor: pointer;
+    img{
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .swiper-my-pagination img {
@@ -87,20 +101,7 @@
 }
 
 #thumbs-product{
-  height: 20%;
-  box-sizing: border-box;
-  padding: 10px 0;
-  .swiper-slide{
-    width: 20%;
-    height: 100%;
-    opacity: 1;
-    cursor: pointer;
-    img{
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-    }
-  }
+  @include thumbs;
 }
 
 

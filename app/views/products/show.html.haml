@@ -5,18 +5,29 @@
       .products__images__box
         .products__images__box__image
           #slider-product.swiper-container
-            = render 'slide'
+            .swiper-wrapper
+              - @images.each do |image|
+                .swiper-slide
+                  = image_tag "#{image.image_url}"
+            .swiper-button-prev.swiper-button-white
+            .swiper-button-next.swiper-button-white
           #thumbs-product.swiper-container.mb60
-            = render 'thumbs'
+            .swiper-wrapper
+              - @images.each do |image|
+                .swiper-slide
+                  = image_tag "#{image.image_url}"
     .products__right
       .products__right__box
         .products__right__box__product
           .products__right__box__product__detele
             .products__right__box__product__detele__name
-              %h2 ランニングシューズ
-              %h1 ナイキ ズームX ヴェイパーフライ ネクスト％
+              %h2 
+                = @product.category.name
+              %h1 
+                = @product.name
             .products__right__box__product__detele__price
-              %span.product__price ¥30,250
+              %span.product__price 
+                = "¥#{@product.price}" 
               %br/
               %span.product__tax (税込)
           .products__right__box__product__form
