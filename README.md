@@ -2,20 +2,23 @@
 
 
 * 制作背景
-<details>Nikeとメルカリを組み合わせた、フリマアプリに近い商品投稿Appです。
-主にNikeのホームページを参考に作成しました。</details>
+<p>Nikeとメルカリを組み合わせた、フリマアプリに近い商品投稿Appです。
+主にNikeのホームページを参考に作成しました。</p>
 
 <img src="https://i.gyazo.com/be7f921173a1212c39a49677162e82ef.jpg" alt="Image from Gyazo" width="1440"/></a>
 
 <img src="https://i.gyazo.com/fbabc6b18c275eea1a3052db03d1e983.png" alt="Image from Gyazo" width="1440"/></a>
 
-<video alt="Video from Gyazo" width="1000" autoplay muted loop playsinline controls><source src="https://i.gyazo.com/92908644b839abe429419dd931a405ec.mp4" type="video/mp4" /></video></a>
+</br>
+</br>
 
 * 工夫した点
 <p>最終課題の方で、自分が担当した機能をもう一度振り返って作成しました。
   特にカテゴリー関連や、新規登録・ログイン機能の担当してた機能は充実させたと思います。
   自分が担当しなかった出品機能など、直接携わってなかった機能も取り入れようと、最終課題のコードと参考記事を確認しました。
-  自分なりにDBも変えて、少ないカラムで出品が可能な簡単な機能を作成してみました。</p>
+  自分なりにDBも変えて、少ないカラムで出品が可能な簡単な機能を作成してみました。
+  商品の表示の仕方もSwiperを使ってスライド表示させるようにJavascriptと画像表示の仕組みを変えてみて、オリジナリティーのある作品に仕上げました。
+  </p>
 </br>
 </br>
 
@@ -29,6 +32,11 @@
 </br>
 
 * テスト
+ - 商品出品
+ - ユーザー登録
+ - SNSでのユーザー登録
+ - 商品一覧表示
+ - カテゴリー
 
 </br>
 </br>

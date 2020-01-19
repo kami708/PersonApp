@@ -14,7 +14,6 @@ class ProductsController < ApplicationController
     5.times{@product.product_images.build}
     @brands = Brand.where('name LIKE(?)',"%#{params[:keyword]}%").limit(5)
     @category_parent_array = Category.where(ancestry: nil)
-
   end
 
   def show
