@@ -5,9 +5,9 @@
 <p>Nikeとメルカリを組み合わせた、フリマアプリに近い商品投稿Appです。
 主にNikeのホームページを参考に作成しました。</p>
 
-<img src="https://i.gyazo.com/be7f921173a1212c39a49677162e82ef.jpg" alt="Image from Gyazo" width="1440"/></a>
+<img src="https://i.gyazo.com/be7f921173a1212c39a49677162e82ef.jpg" alt="Image from Gyazo" width="1440"/>
 
-<img src="https://i.gyazo.com/fbabc6b18c275eea1a3052db03d1e983.png" alt="Image from Gyazo" width="1440"/></a>
+<img src="https://i.gyazo.com/fbabc6b18c275eea1a3052db03d1e983.png" alt="Image from Gyazo" width="1440"/>
 
 </br>
 </br>
@@ -59,4 +59,5 @@
   - ログアウト機能
   - カテゴリー別商品表示機能
 
-
+* DB設計
+<img src="https://i.gyazo.com/268c66b3c7e3666258b2172ba9e7a42f.png" alt="Image from Gyazo" width="1094"/>
