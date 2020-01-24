@@ -66,6 +66,8 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
@@ -85,3 +87,7 @@ gem 'devise_token_auth'
 gem 'instagram'
 gem 'omniauth-instagram'
 gem 'rack-cors'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end

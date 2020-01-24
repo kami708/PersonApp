@@ -74,9 +74,10 @@
                 %span
                   お気に入りに追加
                 = image_tag "icon_heart.png", size: "18"
-  .products__change
-    .products__change__box
-      =link_to  "商品の編集","#0", class: "products__change__box__edit"
-      =link_to "この商品を削除する", "#", class: 'modalbttn'
+  - if user_signed_in? && current_user.id == @product.seller_id
+    .products__change
+      .products__change__box
+        =link_to  "商品の編集","#0", class: "products__change__box__edit"
+        =link_to "この商品を削除する", "#", class: 'modalbttn'
   = render 'shared/footer'
 = render 'shared/delete-modal'

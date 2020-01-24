@@ -1,24 +1,32 @@
-// .children_list{
+// .children{
 //   display: none;
 // }
 
 .top__header__box__under__categories__list:hover{
   text-decoration: none;  
+
 }
 
-.children_list{
-  background-color: rgb(255, 252, 252);
-  .child_category{
-    margin-right: 50px;
-    height: 200px;
-  }
-}
-.grand_children_list{
-  background-color: rgb(255, 252, 252);
-  width: 100%;
-  color: #000;
-  .grand_child_category{
-    margin-right: 50px;
+.top__header__box__under__categories:hover{
+  text-decoration: none;  
+  .children_list{
+    background-color: rgb(255, 252, 252);
+    width: 100%;
     height: 100%;
+    .child_category{
+      height: 50%;
+      display: inline-block;
+      width: 220px;
+    }
+  }
+  .grand_children_list{
+    background-color: rgb(255, 252, 252);
+    width: 100%;
+    color: #000;
+    .grand_child_category{
+      margin-right: 50px;
+      margin-top: 50px;
+      height: 100%;
+    }
   }
 }
