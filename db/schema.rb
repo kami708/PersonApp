@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_15_184443) do
+ActiveRecord::Schema.define(version: 2020_01_25_072902) do
 
   create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image"
@@ -38,6 +38,16 @@ ActiveRecord::Schema.define(version: 2020_01_15_184443) do
     t.index ["size_id"], name: "index_category_sizes_on_size_id"
   end
 
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "product_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_likes_on_product_id"
+    t.index ["user_id", "product_id"], name: "index_likes_on_user_id_and_product_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "product_images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "image"
     t.bigint "product_id", null: false
@@ -59,6 +69,7 @@ ActiveRecord::Schema.define(version: 2020_01_15_184443) do
     t.datetime "updated_at", null: false
     t.bigint "size_id"
     t.bigint "user_id"
+    t.integer "likes_count", default: 0, null: false
     t.index ["size_id"], name: "index_products_on_size_id"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
@@ -95,6 +106,8 @@ ActiveRecord::Schema.define(version: 2020_01_15_184443) do
 
   add_foreign_key "category_sizes", "categories"
   add_foreign_key "category_sizes", "sizes"
+  add_foreign_key "likes", "products"
+  add_foreign_key "likes", "users"
   add_foreign_key "product_images", "products"
   add_foreign_key "products", "sizes"
   add_foreign_key "products", "users"
