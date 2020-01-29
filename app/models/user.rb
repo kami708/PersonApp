@@ -8,6 +8,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:facebook, :google_oauth2, :instagram]
 
+  has_many :products, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  # has_many :like_products, through: :likes, source: :product
+
   def self.without_sns_data(auth)
   user = User.where(email: auth.info.email).first
     if user.present?

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   resources :tops ,only:[:index]
   resources :products do
+    resources :likes, only: [:create, :destroy]
     collection do
       get 'transaction'
       get 'get_category_children', defaults: { format: 'json' }
@@ -23,6 +24,8 @@ Rails.application.routes.draw do
 
   resources :categories do
   end
+
+  
 
   resources :brands do
   end

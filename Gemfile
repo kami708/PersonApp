@@ -87,6 +87,8 @@ gem 'devise_token_auth'
 gem 'instagram'
 gem 'omniauth-instagram'
 gem 'rack-cors'
+gem 'counter_culture', '~> 1.8'
+gem 'rails-ujs'
 
 group :production do
   gem 'unicorn', '5.4.1'

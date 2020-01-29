@@ -17,6 +17,8 @@ class ProductsController < ApplicationController
   end
 
   def show
+    # @like = Like.create(user_id: current_user.id, product_id: params[:product_id])
+    @likes = Like.where(product_id: params[:id])
     @product = Product.find(params[:id])
     @images = @product.product_images
     if @product.seller_id != current_user.id

@@ -70,10 +70,8 @@
             .products__right__box__product__form__buys
               %button{class: "products__right__box__product__form__buys__purchase", type: "button"}
                 %span 商品を購入する
-              = button_tag "", class: "products__right__box__product__form__buys__like" do
-                %span
-                  お気に入りに追加
-                = image_tag "icon_heart.png", size: "18"
+              %div{id: "likes_buttons_#{@product.id}"}
+                = render partial: "likes/like", locals: {product: @product, like: @likes} 
   - if user_signed_in? && current_user.id == @product.seller_id
     .products__change
       .products__change__box
