@@ -18,8 +18,6 @@
               = link_to "WOMEN", "#root_index-3"
             %li.kids
               = link_to "KIDS", "#root_index-4"
-            %li.shose
-              = link_to "SHOUSE", "#root_index-5"
         .top__contents__box__items
           .top__contents__box__items__new-releases
             .top__contents__box__items__new-releases__title
@@ -41,12 +39,12 @@
             .top__contents__box__items__mens__list
               #slider2.swiper-container
                 .swiper-wrapper
-                  = render partial: "product-slide", collection: @new_releases, as: "product"
+                  = render partial: "product-slide", collection: @mens, as: "product"
                 .swiper-button-prev.swiper-button-white
                 .swiper-button-next.swiper-button-white
               #thumbs2.swiper-container.mb60
                 .swiper-wrapper
-                  = render partial: "product-thumbs", collection: @new_releases, as: "product"
+                  = render partial: "product-thumbs", collection: @mens, as: "product"
           .top__contents__box__items__womens
             .top__contents__box__items__womens__title
               %div{id: "root_index-3"}
@@ -54,12 +52,12 @@
             .top__contents__box__items__womens__list
               #slider3.swiper-container
                 .swiper-wrapper
-                  = render partial: "product-slide", collection: @new_releases, as: "product"
+                  = render partial: "product-slide", collection: @womens, as: "product"
                 .swiper-button-prev.swiper-button-white
                 .swiper-button-next.swiper-button-white
               #thumbs3.swiper-container.mb60
                 .swiper-wrapper
-                  = render partial: "product-thumbs", collection: @new_releases, as: "product"
+                  = render partial: "product-thumbs", collection: @womens, as: "product"
           .top__contents__box__items__kids
             .top__contents__box__items__kids__title
               %div{id: "root_index-4"}
@@ -67,25 +65,12 @@
             .top__contents__box__items__kids__list
               #slider4.swiper-container
                 .swiper-wrapper
-                  = render partial: "product-slide", collection: @new_releases, as: "product"
+                  = render partial: "product-slide", collection: @kids, as: "product"
                 .swiper-button-prev.swiper-button-white
                 .swiper-button-next.swiper-button-white
               #thumbs4.swiper-container.mb60
                 .swiper-wrapper
-                  = render partial: "product-thumbs", collection: @new_releases, as: "product"
-          .top__contents__box__items__shouse
-            .top__contents__box__items__shouse__title
-              %div{id: "root_index-5"}
-                %h3 シューズ
-            .top__contents__box__items__shouse__list
-              #slider5.swiper-container
-                .swiper-wrapper
-                  = render partial: "product-slide", collection: @new_releases, as: "product"
-                .swiper-button-prev.swiper-button-white
-                .swiper-button-next.swiper-button-white
-              #thumbs5.swiper-container.mb60
-                .swiper-wrapper
-                  = render partial: "product-thumbs", collection: @new_releases, as: "product"
+                  = render partial: "product-thumbs", collection: @kids, as: "product"
     = render partial: "shared/exhibit"
     = render 'shared/footer'
 - else

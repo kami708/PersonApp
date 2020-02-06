@@ -77,5 +77,14 @@
       .products__change__box
         =link_to  "商品の編集","#0", class: "products__change__box__edit"
         =link_to "この商品を削除する", "#", class: 'modalbttn'
+  .products__comments
+    - if current_user
+      = form_with(model: [@product, @comment], local: true, id: "new_comment") do |form|
+        = form.text_area :content, placeholder: "コメントする" , rows: "2", class: "textbox"
+        = form.submit "SEND", class: "form__submit"
+    %h4 ＜コメント一覧＞
+    .products__comments__list
+      = render partial: "comments/comment"
+
   = render 'shared/footer'
 = render 'shared/delete-modal'

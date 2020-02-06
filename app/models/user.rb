@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   has_many :products, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :comments
   # has_many :like_products, through: :likes, source: :product
 
   def self.without_sns_data(auth)
