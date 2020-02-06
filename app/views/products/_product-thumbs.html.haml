@@ -1,4 +1,3 @@
 .swiper-slide
-  =link_to "", class: "link" do
-    -image = product.product_images[0]
-    =image_tag "#{image.image}" if product.product_images.present?
+  -image = product.product_images[0]
+  =image_tag "#{image.image}" if product.product_images.present?
