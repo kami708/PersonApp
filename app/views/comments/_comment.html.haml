@@ -1,0 +1,5 @@
+- if @comments
+  - @comments.each do |comment|
+    = link_to comment.user.name, "/users/#{comment.user_id}",class: "username"
+    .comment-style 
+      = comment.content

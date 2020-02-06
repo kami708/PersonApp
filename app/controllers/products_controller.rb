@@ -20,6 +20,8 @@ class ProductsController < ApplicationController
     # @like = Like.create(user_id: current_user.id, product_id: params[:product_id])
     @likes = Like.where(product_id: params[:id])
     @product = Product.find(params[:id])
+    @comments = @product.comments.includes(:user)
+    @comment = @product.comments.build
     @images = @product.product_images
     if @product.seller_id != current_user.id
       redirect_to root_path
